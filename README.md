@@ -1,4 +1,4 @@
-<img width="200" src="src/main/resources/pic/spring_hibernate.jpg>
+<img width="200" src="src/main/resources/pic/spring_hibernate.jpg">
 
 ### Демонстрация взаимодействия Spring и Hibernate
 
