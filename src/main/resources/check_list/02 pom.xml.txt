@@ -1,0 +1,69 @@
+Работа с pom.xml
+
+Раздел <properties>
+После выбора архетипа maven-archetype-webapp
+
+Убрано
+<name>library Maven Webapp</name>
+...
+<url>http://www.example.com</url>
+
+Добавлено
+<spring.version>5.2.1.RELEASE</spring.version>
+<hibernate.version>5.4.28.Final</hibernate.version>
+
+Можно задать такую переменную, а потом использовать
+её вместо версии, если версии повторяются
+<version>${spring.version}</version>
+В Spring Framework часто используется одна
+и таже версия в разных пакетах
+
+-----
+
+Раздел <dependencies>
+Добавляем нужные зависимости для нашего проекта
+
+<artifactId>spring-core</artifactId>
+Базовые библиотеки для Spring Framework
+
+<artifactId>spring-context</artifactId>
+Базовые библиотеки для Spring Framework
+
+<artifactId>spring-web</artifactId>
+Зависимости Spring MVC
+
+<artifactId>spring-webmvc</artifactId>
+Зависимости Spring MVC
+
+<artifactId>spring-jdbc</artifactId>
+JdbcTemplate для повышения удобства работы с DAO
+(обертка над JDBC API)
+
+<artifactId>javax.servlet-api</artifactId>
+Зависимость используется абстрактным классом
+AbstractAnnotationConfigDispatcherServletInitializer
+в файле MySpringMvcDispatcherServletInitializer
+заменяющим web.xml
+
+<artifactId>thymeleaf-spring5</artifactId>
+Thymeleaf используется для облегчения работы
+с представлениями, для связи между моделью и
+представлением
+
+<artifactId>hibernate-validator</artifactId>
+Используется для валидации моделей в представлении.
+Для валидации и обработки сообщений от БД используется
+org.springframework.validation.Validator
+
+<artifactId>postgresql</artifactId>
+Используется для подключения к базе данных
+
+<artifactId>hibernate-core</artifactId>
+<artifactId>spring-orm</artifactId>
+Для подключения возможностей ORM Hibernate
+
+---
+
+Раздел <build>
+После выбора архетипа maven-archetype-webapp
+в раздел изменений не вносилось

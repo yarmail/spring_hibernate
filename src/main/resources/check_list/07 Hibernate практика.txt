@@ -1,0 +1,28 @@
+Обобщим информацию о том, как как связать Спринг и Хибернайт
+(что было сделано в этом проекте
+
+1. Добавляем нужные зависимости в pom.xml
+
+<artifactId>hibernate-core</artifactId>
+<artifactId>spring-orm</artifactId>
+Для подключения возможностей ORM Hibernate
+
+2. Обновляем файл настроек базы данных
+src/main/resources/hibernate.properties
+
+3. Обновляем конфиг Спринга
+src/main/java/project/config/SpringConfig.java
+Добавляем методы
+hibernateProperties()
+sessionFactory()
+hibernateTransactionManager()
+и обновляем метод
+dataSource()
+
+4. Делаем модель (класс) Person сущностью для Hibernate
+(подробности в самом классе)
+
+5. Заменяем DAO слой на Hibernate
+src/main/java/project/dao/PersonDAO.java
+
+6. Тестируем как все получилось в браузере
